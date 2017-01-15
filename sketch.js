@@ -1,4 +1,4 @@
-//var dots = [];
+var dots = [];
 
 var value = 0;  //starting value of earthquake
 var magnitude;
@@ -48,8 +48,8 @@ function draw(){
     textStyle(NORMAL);
     text("Magnitude", width - width/6, 300);
     textSize(15);
-    textAlign(LEFT);
-    text(magnitude, width - width/6, 340); 
+    textAlign(CENTER);
+    text(magnitude, width - width/6, 400); 
         
     textStyle(BOLD);
     textSize(20);

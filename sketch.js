@@ -17,26 +17,18 @@ function setup(){
 function draw(){
     background(204);
     
+    magnitude = map(value, 0, 1000, 0, 10);
+    
+    if (value = 0){
      //textFont('Inconsolata');
      textSize(20);
      textAlign(CENTER);
-     textStyle(NORMAL);
+     textStyle(BOLD);
      fill(0);
      noStroke();
-     text("SHAKE YOUR DEVICE", width/2, 20);    
-    
-    magnitude = map(value, 0, 1000, 0, 10);
-/*        //CREATE THE ELLIPSE AREA
-    var x = width/2;
-    var y = height/2;
-    var r = value; 
-    
-    noFill();
-    stroke(0);
-    strokeWeight(1);
-    ellipse (x, y, r, r);  */ // messo nell'if()
-    
-    if (value > 0){
+     text("SHAKE YOUR DEVICE", width/2, 20); 
+    }   
+    else if (value > 0){
         //magnitude indication
     fill(0);
     noStroke();    
@@ -44,15 +36,14 @@ function draw(){
     textSize(12);
     textAlign(CENTER);
     textStyle(NORMAL);
-    text("Magnitude", width - width/6, height/3.5);
+    text("Magnitude", width - width/6, height/3);
     textSize(15);
     textAlign(CENTER);
-    textStyle(BOLD); 
-    
-    text(magnitude, width - width/6, height/2); 
-    
+    text(magnitude, width - width/6, height/2.8); 
+        
+    textStyle(BOLD);
     textSize(20);
-    text('SEE RESULTS', width/2, height/1.1);
+    text('SEE RESULTS', width/2, height/1.05);
         
         //CREATE THE ELLIPSE AREA
     var x = width/2;
@@ -85,7 +76,7 @@ function draw(){
 
 function deviceShaken(){
     
-    value = (accelerationX * accelerationY * accelerationZ)*3;
+    value = (accelerationX * accelerationY * accelerationZ)*2;
     
     /*
     if (value > 0){

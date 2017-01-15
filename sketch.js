@@ -23,7 +23,7 @@ function draw(){
      textStyle(NORMAL);
      fill(0);
      noStroke();
-     text("SHAKE YOUR DEVICE", width/2, 20);    
+     text("SHAKE YOUR DEVICE", width/2, 30);    
     
     magnitude = map(value, 0, 1000, 0, 10);
     
@@ -46,14 +46,14 @@ function draw(){
     textSize(12);
     textAlign(CENTER);
     textStyle(NORMAL);
-    text("Magnitude", width - width/6, height/3);
+    text("Magnitude", width - width/6, 300);
     textSize(15);
-    textAlign(CENTER);
-    text(magnitude, width - width/6, height/2.9); 
+    textAlign(RIGHT);
+    text(magnitude, width - width/6, 320); 
         
     textStyle(BOLD);
     textSize(20);
-    text('SEE RESULTS', width/2, height/1.05);
+    text('SEE RESULTS', width/2, 560);
         
     }    
     

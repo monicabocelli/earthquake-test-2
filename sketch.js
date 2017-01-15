@@ -28,21 +28,6 @@ function draw(){
     magnitude = map(value, 0, 500, 0, 10);
     
     if (value > 0){
-        //magnitude indication
-    fill(0);
-    noStroke();    
-    //textFont('Inconsolata');
-    textSize(12);
-    textAlign(CENTER);
-    textStyle(NORMAL);
-    text("Magnitude", width - width/6, height/3);
-    textSize(15);
-    textAlign(CENTER);
-    text(magnitude, width - width/6, height/2.8); 
-        
-    textStyle(BOLD);
-    textSize(20);
-    text('SEE RESULTS', width/2, height/1.05);
         
         //CREATE THE ELLIPSE AREA
     var x = width/2;
@@ -54,6 +39,22 @@ function draw(){
     strokeWeight(1);
     ellipse (x, y, r, r);
 
+        //magnitude indication
+    fill(0);
+    noStroke();    
+    //textFont('Inconsolata');
+    textSize(12);
+    textAlign(CENTER);
+    textStyle(NORMAL);
+    text("Magnitude", width - width/6, height/3);
+    textSize(15);
+    textAlign(CENTER);
+    text(magnitude, width - width/6, height/2.9); 
+        
+    textStyle(BOLD);
+    textSize(20);
+    text('SEE RESULTS', width/2, height/1.05);
+        
     }    
     
     

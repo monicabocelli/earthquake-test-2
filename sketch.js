@@ -55,7 +55,7 @@ function draw(){
 
 function deviceShaken(){
     
-    value = accelerationX * accelerationY * accelerationZ;
+    value = (accelerationX * accelerationY * accelerationZ)*3;
     
     if (value > 0){
         //magnitude indication

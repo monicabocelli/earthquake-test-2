@@ -5,7 +5,7 @@ var magnitude;
     
 
 function setup(){
-    createCanvas(400, 400);
+    createCanvas(windowWidth, windowHeight);
    /* 
     //create objects
     for (var i = 0; i < value*5; i++){
@@ -18,10 +18,12 @@ function draw(){
     background(204);
     
      textFont('Inconsolata');
-     textSize(30);
+     textSize(20);
      textAlign(CENTER);
      textStyle(NORMAL);
-     text("SHAKE YOUR DEVICE", width/2, height/2);    
+     fill(0);
+     noStroke();
+     text("SHAKE YOUR DEVICE", width/2, 20);    
     
     magnitude = map(value, 0, 1000, 0, 10);
         //CREATE THE ELLIPSE AREA

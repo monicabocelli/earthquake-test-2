@@ -36,6 +36,24 @@ function draw(){
     strokeWeight(1);
     ellipse (x, y, r, r);
     
+    if (value > 0){
+        //magnitude indication
+    textFont('Inconsolata');
+    textSize(12);
+    textAlign(CENTER);
+    textStyle(NORMAL);
+    text("Magnitude", width - width/6, height/3.5);
+    textSize(15);
+    textAlign(CENTER);
+    textStyle(BOLD); 
+    
+    text(magnitude, width - width/6, height/2); 
+    
+    textSize(20);
+    text('SEE RESULTS', width/2, height/1.1);
+
+    }    
+    
     
     
     /*
@@ -57,6 +75,7 @@ function deviceShaken(){
     
     value = (accelerationX * accelerationY * accelerationZ)*3;
     
+    /*
     if (value > 0){
         //magnitude indication
     textFont('Inconsolata');
@@ -76,7 +95,7 @@ function deviceShaken(){
     }    
     
     //QuakeDots();    
-    
+    */
     
 }
 

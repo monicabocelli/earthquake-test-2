@@ -6,18 +6,18 @@ var magnitude;
 
 function setup(){
     createCanvas(400, 600);
-    /*
+   
     //create objects
     for (var i = 0; i < value*5; i++){
         dots.push(new QuakeDots());
     }
-    */
+    
 }
 
 function draw(){
     background(204);
     
-     //textFont('Inconsolata');
+    
      textSize(20);
      textAlign(CENTER);
      textStyle(NORMAL);
@@ -25,7 +25,7 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2, 20);    
     
-    magnitude = map(value, 0, 500, 0, 10);
+    magnitude = map(value, 0, 1000, 0, 10);
     
     if (value > 0){
         
@@ -39,10 +39,10 @@ function draw(){
     strokeWeight(1);
     ellipse (x, y, r, r);
 
-        //magnitude indication
+    //magnitude indication
     fill(0);
     noStroke();    
-    //textFont('Inconsolata');
+    
     textSize(12);
     textAlign(CENTER);
     textStyle(NORMAL);
@@ -59,7 +59,7 @@ function draw(){
     
     
     
-    /*
+    
     //draw dots and given methods (actions)
       noStroke();
       fill(0);
@@ -69,7 +69,7 @@ function draw(){
         
       }
         
-   */
+  
     
 }
    
@@ -78,12 +78,12 @@ function deviceShaken(){
     
     value = (accelerationX * accelerationY * accelerationZ)*2;
     
-    //QuakeDots();    
+    QuakeDots();    
    
     
 }
 
-/*
+
 function QuakeDots(){
     
     var d = dist(width/2,height/2,width/2+value/2,height/2);
@@ -101,4 +101,4 @@ function QuakeDots(){
     };
     
 }
-*/
+

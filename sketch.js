@@ -11,47 +11,15 @@ function setup(){
         dots.push(new QuakeDots());
     }
     
-   // image(img, 0, 0);
 }
 
 function draw(){
     background(204);
-    
-    if (value = 0){
-        
-    textFont('Inconsolata');
-    textSize(30);
-    textAlign(CENTER);
-    textStyle(NORMAL);
-    text("SHAKE YOUR DEVICE", width/2, height/2); 
-    
-    } else if (value > 0){
-        
-    deviceShaken();
-    
-    //draw dots and given methods (actions)
-      noStroke();
-      fill(0);
-      for (var i = 0; i < value*5; i++){
-        dots[i].move();
-        dots[i]. display();
-        
-      }
-        textSize(20);
-        text('SEE RESULTS', width/2, height/1.1);
-    };
-    
-}
-   
 
-function deviceShaken(){
+    var magnitude = map(value, 0, 1000, 0, 10);    
+  
     
-    QuakeDots();    
-    
-    value = accelerationX * accelerationY * accelerationZ;
-    magnitude = map(value, 0, 1000, 0, 10);
-    
-    //CREATE THE ELLIPSE AREA
+        //CREATE THE ELLIPSE AREA
     var x = width/2;
     var y = height/2;
     var r = value; 
@@ -71,7 +39,35 @@ function deviceShaken(){
     textAlign(CENTER);
     textStyle(BOLD); 
     
-    text(magnitude, width - width/6, height/2); //COME SOPRA IN DRAW()
+    text(magnitude, width - width/6, height/2); 
+    
+    //draw dots and given methods (actions)
+      noStroke();
+      fill(0);
+      for (var i = 0; i < value*5; i++){
+        dots[i].move();
+        dots[i]. display();
+        
+      }
+        textSize(20);
+        text('SEE RESULTS', width/2, height/1.1);
+   
+    
+}
+   
+
+function deviceShaken(){
+    
+    value = accelerationX * accelerationY * accelerationZ;
+    
+    //QuakeDots();    
+    if (value = 0){
+     textFont('Inconsolata');
+     textSize(30);
+     textAlign(CENTER);
+     textStyle(NORMAL);
+     text("SHAKE YOUR DEVICE", width/2, height/2);    
+    
 }
 
 

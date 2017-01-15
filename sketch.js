@@ -19,7 +19,7 @@ function draw(){
     
     magnitude = map(value, 0, 1000, 0, 10);
     
-    if (value = 0){
+    //if (value = 0){   // con l'if non si vede nulla
      //textFont('Inconsolata');
      textSize(20);
      textAlign(CENTER);
@@ -27,8 +27,8 @@ function draw(){
      fill(0);
      noStroke();
      text("SHAKE YOUR DEVICE", width/2, 20); 
-    }   
-    else if (value > 0){
+    //}   
+    if (value > 0){
         //magnitude indication
     fill(0);
     noStroke();    
@@ -79,24 +79,6 @@ function deviceShaken(){
     value = (accelerationX * accelerationY * accelerationZ)*2;
     
     /*
-    if (value > 0){
-        //magnitude indication
-    textFont('Inconsolata');
-    textSize(12);
-    textAlign(CENTER);
-    textStyle(NORMAL);
-    text("Magnitude", width - width/6, height/3.5);
-    textSize(15);
-    textAlign(CENTER);
-    textStyle(BOLD); 
-    
-    text(magnitude, width - width/6, height/2); 
-    
-    textSize(20);
-    text('SEE RESULTS', width/2, height/1.1);
-
-    }    
-    
     //QuakeDots();    
     */
     

@@ -26,7 +26,7 @@ function draw(){
      text("SHAKE YOUR DEVICE", width/2, 20);    
     
     magnitude = map(value, 0, 1000, 0, 10);
-        //CREATE THE ELLIPSE AREA
+/*        //CREATE THE ELLIPSE AREA
     var x = width/2;
     var y = height/2;
     var r = value; 
@@ -34,7 +34,7 @@ function draw(){
     noFill();
     stroke(0);
     strokeWeight(1);
-    ellipse (x, y, r, r);
+    ellipse (x, y, r, r);  */ // messo nell'if()
     
     if (value > 0){
         //magnitude indication
@@ -51,6 +51,16 @@ function draw(){
     
     textSize(20);
     text('SEE RESULTS', width/2, height/1.1);
+        
+        //CREATE THE ELLIPSE AREA
+    var x = width/2;
+    var y = height/2;
+    var r = value; 
+    
+    noFill();
+    stroke(0);
+    strokeWeight(1);
+    ellipse (x, y, r, r);
 
     }    
     

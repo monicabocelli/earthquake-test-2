@@ -6,7 +6,7 @@ var magnitude;
 
 function setup(){
     createCanvas(400, 600);
-   /* 
+    /*
     //create objects
     for (var i = 0; i < value*5; i++){
         dots.push(new QuakeDots());
@@ -25,16 +25,7 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2, 20);    
     
-    magnitude = map(value, 0, 1000, 0, 10);
-/*        //CREATE THE ELLIPSE AREA
-    var x = width/2;
-    var y = height/2;
-    var r = value; 
-    
-    noFill();
-    stroke(0);
-    strokeWeight(1);
-    ellipse (x, y, r, r);  */ // messo nell'if()
+    magnitude = map(value, 0, 500, 0, 10);
     
     if (value > 0){
         //magnitude indication
@@ -44,15 +35,14 @@ function draw(){
     textSize(12);
     textAlign(CENTER);
     textStyle(NORMAL);
-    text("Magnitude", width - width/6, height/3.5);
+    text("Magnitude", width - width/6, height/3);
     textSize(15);
     textAlign(CENTER);
-    textStyle(BOLD); 
-    
-    text(magnitude, width - width/6, height/2); 
-    
+    text(magnitude, width - width/6, height/2.8); 
+        
+    textStyle(BOLD);
     textSize(20);
-    text('SEE RESULTS', width/2, height/1.1);
+    text('SEE RESULTS', width/2, height/1.05);
         
         //CREATE THE ELLIPSE AREA
     var x = width/2;
@@ -85,28 +75,10 @@ function draw(){
 
 function deviceShaken(){
     
-    value = (accelerationX * accelerationY * accelerationZ)*3;
-    
-    /*
-    if (value > 0){
-        //magnitude indication
-    textFont('Inconsolata');
-    textSize(12);
-    textAlign(CENTER);
-    textStyle(NORMAL);
-    text("Magnitude", width - width/6, height/3.5);
-    textSize(15);
-    textAlign(CENTER);
-    textStyle(BOLD); 
-    
-    text(magnitude, width - width/6, height/2); 
-    
-    textSize(20);
-    text('SEE RESULTS', width/2, height/1.1);
-    }    
+    value = (accelerationX * accelerationY * accelerationZ)*2;
     
     //QuakeDots();    
-    */
+   
     
 }
 

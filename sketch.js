@@ -55,6 +55,9 @@ function draw(){
     textSize(20);
     text('SEE RESULTS', width/2, 560);
         
+        
+    QuakeDots();
+        
     }    
     
     
@@ -78,7 +81,7 @@ function deviceShaken(){
     
     value = (accelerationX * accelerationY * accelerationZ)*2;
     
-    QuakeDots();    
+   // QuakeDots();    
    
     
 }

@@ -38,7 +38,9 @@ function draw(){
     
     if (value > 0){
         //magnitude indication
-    textFont('Inconsolata');
+    fill(0);
+    noStroke();    
+    //textFont('Inconsolata');
     textSize(12);
     textAlign(CENTER);
     textStyle(NORMAL);

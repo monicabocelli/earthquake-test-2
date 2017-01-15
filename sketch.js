@@ -5,7 +5,7 @@ var magnitude;
     
 
 function setup(){
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(400, 600);
    /* 
     //create objects
     for (var i = 0; i < value*5; i++){
@@ -17,7 +17,7 @@ function setup(){
 function draw(){
     background(204);
     
-     textFont('Inconsolata');
+     //textFont('Inconsolata');
      textSize(20);
      textAlign(CENTER);
      textStyle(NORMAL);

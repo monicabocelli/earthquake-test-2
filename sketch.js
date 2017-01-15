@@ -1,16 +1,16 @@
-var dots = [];
+//var dots = [];
 
 var value = 0;  //starting value of earthquake
     
 
 function setup(){
     createCanvas(500, 800);
-    
+   /* 
     //create objects
     for (var i = 0; i < value*5; i++){
         dots.push(new QuakeDots());
     }
-    
+    */
 }
 
 function draw(){
@@ -41,6 +41,10 @@ function draw(){
     
     text(magnitude, width - width/6, height/2); 
     
+    textSize(20);
+    text('SEE RESULTS', width/2, height/1.1);
+    
+    /*
     //draw dots and given methods (actions)
       noStroke();
       fill(0);
@@ -49,16 +53,15 @@ function draw(){
         dots[i]. display();
         
       }
-        textSize(20);
-        text('SEE RESULTS', width/2, height/1.1);
-   
+        
+   */
     
 }
    
 
 function deviceShaken(){
     
-    value = accelerationX * accelerationY * accelerationZ;
+    value = value + (accelerationX * accelerationY * accelerationZ);
     
     //QuakeDots();    
     if (value = 0){
@@ -70,7 +73,7 @@ function deviceShaken(){
     
 }
 
-
+/*
 function QuakeDots(){
     
     var d = dist(width/2,height/2,width/2+value/2,height/2);
@@ -92,3 +95,4 @@ function QuakeDots(){
 
     
 }
+*/

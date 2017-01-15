@@ -48,8 +48,8 @@ function draw(){
     textStyle(NORMAL);
     text("Magnitude", width - width/6, 300);
     textSize(15);
-    textAlign(RIGHT);
-    text(magnitude, width - width/6, 320); 
+    textAlign(LEFT);
+    text(magnitude, width - width/6, 340); 
         
     textStyle(BOLD);
     textSize(20);

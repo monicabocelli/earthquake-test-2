@@ -25,7 +25,7 @@ function draw(){
         //CREATE THE ELLIPSE AREA
     var x = width/2;
     var y = height/2;
-    var r = value; 
+    var r = value/2; 
     
     noFill();
     stroke(0);
@@ -39,14 +39,15 @@ function draw(){
     textSize(12);
     textAlign(CENTER);
     textStyle(NORMAL);
-    text("Magnitude", width - width/6, 300);
-    textSize(15);
+    text("Magnitude", width - width/7, 300);
+    textSize(20);
     textAlign(CENTER);
-    text(magnitude, width - width/6, 400); 
+    text(magnitude, width - width/7, 340);
+    text(value, width - width/7, 400);
         
     textStyle(BOLD);
     textSize(20);
-    text('SEE RESULTS', width/2, 560);
+    text('SEE RESULTS', width/2, 570);
         
     }    
     

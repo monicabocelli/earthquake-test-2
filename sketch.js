@@ -1,7 +1,7 @@
 var dots = [];
 
 var value = 0;  //starting value of earthquake
-var magnitude;
+//var magnitude;
     
 
 function setup(){
@@ -22,7 +22,7 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2, 30);    
     
-    magnitude = map(value, 0, 1000, 0, 10);
+    var magnitude = map(value, 0, 1000, 0, 10);
     
     if (value > 0){
         
@@ -64,7 +64,7 @@ function draw(){
     //draw dots and given methods (actions)
       noStroke();
       fill(0);
-      for (var i = 0; i < value*5; i++){
+      for (var i = 0; i < value*8; i++){
         dots[i].move();
         dots[i]. display();
         
@@ -82,7 +82,7 @@ function deviceShaken(){
    // QuakeDots();    
    
     //create objects
-    for (var i = 0; i < value*5; i++){
+    for (var i = 0; i < value*8; i++){
         dots.push(new QuakeDots());
     }   
     

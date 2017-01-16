@@ -55,13 +55,9 @@ function draw(){
         
    // QuakeDots();
         
-     //create objects
-    for (var i = 0; i < value*5; i++){
-        dots.push(new QuakeDots());
-    }   
+     
         
     }    
-    
     
     
     
@@ -85,6 +81,10 @@ function deviceShaken(){
     
    // QuakeDots();    
    
+    //create objects
+    for (var i = 0; i < value*5; i++){
+        dots.push(new QuakeDots());
+    }   
     
 }
 

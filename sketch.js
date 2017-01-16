@@ -7,10 +7,7 @@ var magnitude;
 function setup(){
     createCanvas(400, 600);
    
-    //create objects
-    for (var i = 0; i < value*5; i++){
-        dots.push(new QuakeDots());
-    }
+    
     
 }
 
@@ -57,6 +54,11 @@ function draw(){
         
         
    // QuakeDots();
+        
+     //create objects
+    for (var i = 0; i < value*5; i++){
+        dots.push(new QuakeDots());
+    }   
         
     }    
     

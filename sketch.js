@@ -1,14 +1,10 @@
 var dots = [];
 
 var value = 0;  //starting value of earthquake
-//var magnitude;
     
 
 function setup(){
-    createCanvas(400, 600);
-   
-    
-    
+    createCanvas(400, 600); 
 }
 
 function draw(){
@@ -52,11 +48,6 @@ function draw(){
     textSize(20);
     text('SEE RESULTS', width/2, 560);
         
-        
-   // QuakeDots();
-        
-     
-        
     }    
     
     
@@ -69,17 +60,13 @@ function draw(){
         dots[i]. display();
         
       }
-        
   
-    
 }
    
 
 function deviceShaken(){
     
-    value = (accelerationX * accelerationY * accelerationZ)*2;
-    
-   // QuakeDots();    
+    value = (accelerationX * accelerationY * accelerationZ)*2;   
    
     //create objects
     for (var i = 0; i < value*8; i++){

@@ -81,7 +81,7 @@ function deviceShaken(){
     
     value = (accelerationX * accelerationY * accelerationZ)*2;
     
-    QuakeDots();    
+   // QuakeDots();    
    
     
 }

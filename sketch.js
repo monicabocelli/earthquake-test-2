@@ -11,12 +11,12 @@ function draw(){
      background(204);
      angleMode(DEGREES);
     
-     textSize(20);
+     textSize(height/30);
      textAlign(CENTER);
      textStyle(NORMAL);
      fill(0);
      noStroke();
-     text("SHAKE YOUR DEVICE", width/2, 30);    
+     text("SHAKE YOUR DEVICE", width/2,height - height/1.2);    
     
     var magnitude = int(map(value, 0, value, 0, 10));
     

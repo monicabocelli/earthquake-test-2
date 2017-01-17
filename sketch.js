@@ -46,8 +46,10 @@ function draw(){
     textStyle(BOLD);
     text(magnitude,width/2, height - height/6.7);
     
-    textSize(height/35);
-    text(value, width/2, height - height/7.2);
+    textSize(height/40);
+    textAlign(CENTER);
+    textStyle(NORMAL);    
+    text(value, width/2, height - height/7.5);
         
     textStyle(BOLD);
     textSize(height/30);

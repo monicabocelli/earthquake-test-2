@@ -1,10 +1,11 @@
 var dots = [];
 
 var value = 0;  //starting value of earthquake
-    
+var magnitude;    
 
 function setup(){
      createCanvas(windowWidth, windowHeight);
+     magnitude = int(map(value, 0, 1000, 0, 10));
 }
 
 function draw(){
@@ -16,9 +17,9 @@ function draw(){
      textStyle(BOLD);
      fill(0);
      noStroke();
-     text("SHAKE YOUR DEVICE", width/2,height - height/1.2);    
+     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
     
-    var magnitude = int(map(value, 0, pAccelerationX * pAccelerationY, 0, 10));
+   // var magnitude = int(map(value, 0, pAccelerationX * pAccelerationY, 0, 10));
     
     if (magnitude > 0){
         

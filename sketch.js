@@ -20,7 +20,7 @@ function draw(){
     
     var magnitude = int(map(value, 900, 9000, 0, 10));
     
-    if (magnitude > 0){
+    if (value > 900){
         
         //CREATE THE ELLIPSE AREA
     var x = width/2;

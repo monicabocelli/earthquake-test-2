@@ -18,7 +18,7 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.2);    
     
-    var magnitude = int(map(value, 0, 1000, 0, 10));
+    var magnitude = int(map(value, 0, 800, 0, 10));
     
     if (value > 0){
         
@@ -46,10 +46,10 @@ function draw(){
     textStyle(BOLD);
     text(magnitude,width/2, height - height/6.7);
     
-    textSize(height/40);
+    textSize(height/50);
     textAlign(CENTER);
     textStyle(NORMAL);    
-    text(value, width/2, height - height/7.5);
+    text(value, width/2, height - height/8);
         
     textStyle(BOLD);
     textSize(height/30);

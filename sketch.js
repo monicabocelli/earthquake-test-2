@@ -101,6 +101,11 @@ function QuakeDots(){
       this.ydot += random(-this.speed,this.speed);
     }
     this.display = function(){
+         
+       if(this.xdot > width/2 + d || this.xdot < width/2 - d || this.ydot > height/2 + d || this.ydot < height/2 - d){
+       this.xdot = random(width/2 - d, width/2 + d);
+       this.ydot = random(height/2 - d, height/2 + d); 
+       }
       ellipse(this.xdot, this.ydot, this.diameter, this.diameter);
     };
     

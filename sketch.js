@@ -21,7 +21,7 @@ function draw(){
     
    // var magnitude = int(map(value, 0, pAccelerationX * pAccelerationY, 0, 10));
     
-    if (magnitude > 0){
+    if (value > 0){
         
         //CREATE THE ELLIPSE AREA
     var x = width/2;
@@ -74,7 +74,7 @@ function draw(){
 
 function deviceShaken(){
     
-    value = pAccelerationX * pAccelerationY;   
+    value = pAccelerationX * pAccelerationY * pAccelerationZ;   
    
     //create objects
     for (var i = 0; i < value*10; i++){

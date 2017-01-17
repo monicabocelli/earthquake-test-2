@@ -70,7 +70,7 @@ function draw(){
 
 function deviceShaken(){
     
-    value = (pAccelerationX * pAccelerationY * pAccelerationZ)/100;   
+    value = (pAccelerationX * pAccelerationY * pAccelerationZ)/300;   
    
     //create objects
     for (var i = 0; i < value*100; i++){

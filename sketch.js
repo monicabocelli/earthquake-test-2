@@ -42,7 +42,8 @@ function draw(){
     textSize(height/20);
     textAlign(CENTER);
     textStyle(BOLD);
-    text(magnitude,width/2, height - height/6.7);
+    //text(magnitude,width/2, height - height/6.7);
+    text(int(value),width/2, height - height/6.7);
     
     textSize(height/50);
     textAlign(CENTER);
@@ -84,7 +85,7 @@ function QuakeDots(){
     
     
     var a = random(0,360);
-    var b = random(0,value * 10);
+    var b = random(0,value * 18);
     var x = sin(a) * b; // mi dà un numero che va da -b a b
     var y = cos(a) * b; // mi dà un numero che va da -b a b
     var d = dist(width/2,height/2, width/2, height/2 + x/2);

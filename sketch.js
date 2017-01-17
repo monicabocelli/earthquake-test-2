@@ -1,12 +1,8 @@
 var dots = [];
-
 var value = 0;
-//var magnitude;    
-
+   
 function setup(){
-     createCanvas(windowWidth, windowHeight);
-    // magnitude = int(map(value, 0, 1000, 0, 10));
-     
+     createCanvas(windowWidth, windowHeight); 
 }
 
 function draw(){
@@ -20,14 +16,14 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
     
-   var magnitude = int(map(value, 0, 100, 0, 10)); // messo in setup il valore di magnitude è fisso e si vedono i pallini
-    
+   //var magnitude = int(map(value, 0, 100, 0, 10)); 
+    var magnitude = int(value);
     if (value > 0){    
         
      //CREATE THE ELLIPSE AREA
     var x = width/2;
     var y = height/2;
-    var r = value * 200; 
+    var r = value * 20; 
     
     noFill();
     stroke(0);
@@ -63,7 +59,7 @@ function draw(){
     //draw dots and given methods (actions)
       noStroke();
       fill(0);
-      for (var i = 0; i < value*10; i++){
+      for (var i = 0; i < value*100; i++){
         dots[i].move();
         dots[i]. display();
         
@@ -77,7 +73,7 @@ function deviceShaken(){
     value = (pAccelerationX * pAccelerationY * pAccelerationZ)/100;   
    
     //create objects
-    for (var i = 0; i < value*10; i++){
+    for (var i = 0; i < value*100; i++){
         dots.push(new QuakeDots());
     } 
     
@@ -88,7 +84,7 @@ function QuakeDots(){
     
     
     var a = random(0,360);
-    var b = random(0,value * 100);
+    var b = random(0,value * 10);
     var x = sin(a) * b; // mi dà un numero che va da -b a b
     var y = cos(a) * b; // mi dà un numero che va da -b a b
     var d = dist(width/2,height/2, width/2, height/2 + x/2);

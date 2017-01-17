@@ -1,12 +1,12 @@
 var dots = [];
 
-var value = 0;  //starting value of earthquake
+var value = (pAccelerationX * pAccelerationY * pAccelerationZ)/2;
 var magnitude;    
 
 function setup(){
      createCanvas(windowWidth, windowHeight);
-    // magnitude = int(map(value, 0, 500, 0, 10));
-     magnitude = map(value, 0, 500, 0, 10));
+     magnitude = int(map(value, 0, 1000, 0, 10));
+     
 }
 
 function draw(){
@@ -22,7 +22,7 @@ function draw(){
     
    // var magnitude = int(map(value, 0, pAccelerationX * pAccelerationY, 0, 10)); // messo in setup il valore di magnitude è fisso e si vedono i pallini
     
-    if (value > 0){
+    if (magnitude > 0){    //if (value > 0){
         
      //CREATE THE ELLIPSE AREA
     var x = width/2;
@@ -60,7 +60,6 @@ function draw(){
     }    
     
     
-    
     //draw dots and given methods (actions)
       noStroke();
       fill(0);
@@ -75,7 +74,7 @@ function draw(){
 
 function deviceShaken(){
     
-    value = pAccelerationX * pAccelerationY * pAccelerationZ;   
+   // value = (pAccelerationX * pAccelerationY * pAccelerationZ)/2;   
    
     //create objects
     for (var i = 0; i < value*10; i++){

@@ -27,7 +27,7 @@ function draw(){
      //CREATE THE ELLIPSE AREA
     var x = width/2;
     var y = height/2;
-    var r = value * 2; 
+    var r = value * 200; 
     
     noFill();
     stroke(0);
@@ -88,7 +88,7 @@ function QuakeDots(){
     
     
     var a = random(0,360);
-    var b = random(0,value);//r = value = 30
+    var b = random(0,value * 100);
     var x = sin(a) * b; // mi dà un numero che va da -b a b
     var y = cos(a) * b; // mi dà un numero che va da -b a b
     var d = dist(width/2,height/2, width/2, height/2 + x/2);

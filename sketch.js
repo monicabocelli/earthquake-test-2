@@ -11,14 +11,14 @@ function draw(){
      background(204);
      angleMode(DEGREES);
     
-     textSize(height/30);
+     textSize(height/20);
      textAlign(CENTER);
-     textStyle(NORMAL);
+     textStyle(BOLD);
      fill(0);
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.2);    
     
-    var magnitude = int(map(value, 0, value, 0, 10));
+    var magnitude = int(map(value, 0, 1000, 0, 10));
     
     if (value > 0){
         
@@ -73,7 +73,7 @@ function draw(){
 
 function deviceShaken(){
     
-    value = (accelerationX * accelerationY * accelerationZ)*2;   
+    value = (accelerationX * accelerationY)*2;   
    
     //create objects
     for (var i = 0; i < value*10; i++){

@@ -1,6 +1,6 @@
 var dots = [];
 
-var value = (pAccelerationX * pAccelerationY * pAccelerationZ)/2;
+var value = 0;
 var magnitude;    
 
 function setup(){
@@ -22,7 +22,7 @@ function draw(){
     
    // var magnitude = int(map(value, 0, pAccelerationX * pAccelerationY, 0, 10)); // messo in setup il valore di magnitude è fisso e si vedono i pallini
     
-    if (magnitude > 0){    //if (value > 0){
+    if (value > 0){    
         
      //CREATE THE ELLIPSE AREA
     var x = width/2;
@@ -74,7 +74,7 @@ function draw(){
 
 function deviceShaken(){
     
-   // value = (pAccelerationX * pAccelerationY * pAccelerationZ)/2;   
+    value = (pAccelerationX * pAccelerationY * pAccelerationZ)/2;   
    
     //create objects
     for (var i = 0; i < value*10; i++){

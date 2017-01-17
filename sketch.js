@@ -18,9 +18,9 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.2);    
     
-    var magnitude = int(map(value, 0, 800, 0, 10));
+    var magnitude = int(map(value, 900, 9000, 0, 10));
     
-    if (value > 0){
+    if (magnitude > 0){
         
         //CREATE THE ELLIPSE AREA
     var x = width/2;
@@ -73,7 +73,7 @@ function draw(){
 
 function deviceShaken(){
     
-    value = (accelerationX * accelerationY)*2;   
+    value = accelerationX * accelerationY;   
    
     //create objects
     for (var i = 0; i < value*10; i++){

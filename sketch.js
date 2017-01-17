@@ -5,7 +5,8 @@ var magnitude;
 
 function setup(){
      createCanvas(windowWidth, windowHeight);
-     magnitude = int(map(value, 0, 2000, 0, 10));
+    // magnitude = int(map(value, 0, 500, 0, 10));
+     magnitude = map(value, 0, 500, 0, 10));
 }
 
 function draw(){
@@ -23,7 +24,7 @@ function draw(){
     
     if (value > 0){
         
-        //CREATE THE ELLIPSE AREA
+     //CREATE THE ELLIPSE AREA
     var x = width/2;
     var y = height/2;
     var r = value * 2; 

@@ -16,8 +16,8 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
     
-   //var magnitude = int(map(value, 0, 100, 0, 10)); 
-    var magnitude = int(value);
+   var magnitude = int(map(value, 0, 100, 0, 10)); 
+    //var magnitude = int(value);
     if (value > 0){    
         
      //CREATE THE ELLIPSE AREA
@@ -85,7 +85,7 @@ function QuakeDots(){
     
     
     var a = random(0,360);
-    var b = random(0,value * 18);
+    var b = random(0,value * 16);
     var x = sin(a) * b; // mi dà un numero che va da -b a b
     var y = cos(a) * b; // mi dà un numero che va da -b a b
     var d = dist(width/2,height/2, width/2, height/2 + x/2);
@@ -94,8 +94,8 @@ function QuakeDots(){
     
     this.xdot = random(width/2 - d, width/2 + d); //according to ellipse area
     this.ydot = random(height/2 - d, height/2 + d); //according to ellipse area
-    this.diameter = 4;
-    this.speed = 2; //according to magnitude
+    this.diameter = 6;
+    this.speed = 4; //according to magnitude
         
 
 this.move = function(){

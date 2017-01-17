@@ -1,11 +1,11 @@
 var dots = [];
 
 var value = 0;
-var magnitude;    
+//var magnitude;    
 
 function setup(){
      createCanvas(windowWidth, windowHeight);
-     magnitude = int(map(value, 0, 1000, 0, 10));
+    // magnitude = int(map(value, 0, 1000, 0, 10));
      
 }
 
@@ -20,7 +20,7 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
     
-   // var magnitude = int(map(value, 0, pAccelerationX * pAccelerationY, 0, 10)); // messo in setup il valore di magnitude è fisso e si vedono i pallini
+   var magnitude = int(map(value, 0, pAccelerationX * pAccelerationY, 0, 10)); // messo in setup il valore di magnitude è fisso e si vedono i pallini
     
     if (value > 0){    
         

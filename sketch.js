@@ -5,7 +5,7 @@ var magnitude;
 
 function setup(){
      createCanvas(windowWidth, windowHeight);
-     magnitude = int(map(value, 0, 1000, 0, 10));
+     magnitude = int(map(value, 0, 2000, 0, 10));
 }
 
 function draw(){
@@ -19,7 +19,7 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
     
-   // var magnitude = int(map(value, 0, pAccelerationX * pAccelerationY, 0, 10));
+   // var magnitude = int(map(value, 0, pAccelerationX * pAccelerationY, 0, 10)); // messo in setup il valore di magnitude è fisso e si vedono i pallini
     
     if (value > 0){
         
@@ -93,8 +93,8 @@ function QuakeDots(){
     var d = dist(width/2,height/2, width/2, height/2 + x/2);
     this.xdot = random(width/2 - d, width/2 + d); //according to ellipse area
     this.ydot = random(height/2 - d, height/2 + d); //according to ellipse area
-    this.diameter = 4;
-    this.speed = 2; //magnitude
+    this.diameter = 8;
+    this.speed = 4; //magnitude
     
     this.move = function(){
       this.xdot += random(-this.speed,this.speed);
